@@ -17,7 +17,7 @@ git clone https://github.com/yourusername/cek-kodam-kamu.git
 cd cek-kodam-kamu
 ```
 
-2. Install dependencies::
+2. Install dependencies:
 ```
 npm install
 ```
