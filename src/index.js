@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './Component/Home';
+import Footer from './Component/Footer';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
-  </React.StrictMode>
+  <div className='wrapper'>
+    <div className='content'>
+      <Home />
+    </div>
+    <div className='footer'>
+      <Footer />
+    </div>
+  </div>
+</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
