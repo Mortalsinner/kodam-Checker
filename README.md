@@ -22,7 +22,7 @@ cd cek-kodam-kamu
 npm install
 ```
 
-3. Start the development server:::
+3. Start the development server:
 ```
 npm start
 ```
