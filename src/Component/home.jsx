@@ -3,7 +3,7 @@ import { Button } from 'react-daisyui';
 
 const Home = () => {
     
-    const kodam = ['macan putih', 'sanca bogor', 'elang botak', 'Hiu Madura','tidak punya', 'ular.py','kerang saus padang', 'teri pasar ciledug'];
+    const kodam = ['macan putih', 'sanca bogor', 'elang botak', 'Penyu Madura','tidak punya', 'ular.py','kerang saus padang', 'teri pasar ciledug', 'lelelawar', 'pindang patin', 'hiu gawr gura'];
     const [inputName, setInputName] = useState('');
     const [randomItem, setRandomItem] = useState('');
 
