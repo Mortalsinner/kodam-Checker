@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Cek Kodam Kamu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that picks a random item from an array when a user clicks the "Submit" button. 
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* Input field for entering your name.
+* Button to pick a random item from an array.
+* Display the randomly picked item.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/cek-kodam-kamu.git
+cd cek-kodam-kamu
+```
 
-### `npm test`
+2. Install dependencies::
+```
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the development server:::
+```
+npm start
+```
+The application will open in your default web browser.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open the application in your web browser.
+2. Enter your name in the input field.
+3. Click the "Submit" button to pick a random item from the array.
+4. The randomly picked item will be displayed below the button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code Overview
 
-### `npm run eject`
+src/App.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This is the main component of the application. It includes the following key parts:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* State Management: Uses the useState hook to manage the state for the random item.
+* Array of Items: The items array contains the list of items to pick from.
+* Pick Random Item Function: The pickRandomItem function picks a random item from the array and updates the state.
+* JSX Structure: The JSX structure includes an input field, a button, and a paragraph to display the random item.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+import React, { useState } from 'react';
+import { Button } from 'react-daisyui';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const Home = () => {
+    const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+    const [randomItem, setRandomItem] = useState('');
 
-## Learn More
+    const pickRandomItem = () => {
+        const randomIndex = Math.floor(Math.random() * items.length);
+        setRandomItem(items[randomIndex]);
+    };
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Cek Kodam Kamu</h1>
+                <input type="text" placeholder="Masukan Nama kamu" className="input input-bordered w-full max-w-xs mt-2" />
+                <Button className="btn btn-primary mt-3" onClick={pickRandomItem}>Submit</Button>
+                {randomItem && <p className="mt-3">Random Item: {randomItem}</p>}
+            </header>
+        </div>
+    );
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export default Home;
+```
 
-### Code Splitting
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React
+* react-daisyui
+* Tailwind CSS
