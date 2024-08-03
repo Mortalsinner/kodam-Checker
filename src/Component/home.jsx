@@ -36,7 +36,8 @@ const Home = () => {
       <div className="artboard artboard-demo phone-1">
 
       <img src="https://static.jojowiki.com/images/thumb/a/ad/latest/20201010224115/JotaroWStarPlatinum.png/400px-JotaroWStarPlatinum.png" alt="" className='w-24 rounded' />
-      
+
+      {/* Form */}
       <div className="App mt-10">
         <header className="App-header">        
         <h1 className='text-3xl font-semibold mt-5'> Cek Kodam Kamu</h1> 
@@ -47,10 +48,27 @@ const Home = () => {
           value={inputName}
           onChange={(e) => setInputName(e.target.value)}
         /><br />
-        <Button className="btn btn-primary mt-3" onClick={picker}>Submit</Button>
+        <Button className="btn btn-primary mt-3" onClick={picker}>Submit</Button>&nbsp;&nbsp;
+        <button className="btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>Info</button>
         {randomItem && <p className="mt-3">Kodam kamu: {randomItem}</p>}
-        </header>
-      </div>
+
+
+      {/* Modal */}
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Hello!</h3>
+          <p className="py-4">Khodam adalah istilah bahasa Arab yang berarti pembantu atau abdi. Istilah ini kemudian diserap dalam bahasa Indonesia menjadi khadam atau khadim yang artinya pelayan atau orang gajian.</p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      </header>
+    </div>
       
 
 
