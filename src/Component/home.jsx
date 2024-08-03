@@ -29,10 +29,17 @@ const Home = () => {
 
     return ( 
 
-    <center>
+  <center>
+    <div className="mockup-phone border-neutral mt-3">
+      <div className="camera"></div>
+      <div className="display">
+      <div className="artboard artboard-demo phone-1">
+
+      <img src="https://static.jojowiki.com/images/thumb/a/ad/latest/20201010224115/JotaroWStarPlatinum.png/400px-JotaroWStarPlatinum.png" alt="" className='w-24 rounded' />
+      
       <div className="App mt-10">
-        <header className="App-header">
-        <h1 className='text-3xl font-semibold'> Cek Kodam Kamu</h1> 
+        <header className="App-header">        
+        <h1 className='text-3xl font-semibold mt-5'> Cek Kodam Kamu</h1> 
         <input
           type="text"
           placeholder="Masukan Nama kamu"
@@ -44,7 +51,14 @@ const Home = () => {
         {randomItem && <p className="mt-3">Kodam kamu: {randomItem}</p>}
         </header>
       </div>
-      </center>
+      
+
+
+      </div>
+      </div>
+    </div>
+  </center>
+    
      );
 }
  
