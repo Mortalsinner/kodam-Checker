@@ -41,9 +41,7 @@ const Home = () => {
       <div className="App mt-10">
         <header className="App-header">        
         <h1 className='text-3xl font-semibold mt-5'> Cek Kodam Kamu</h1> 
-       
-       
-        {randomItem && <p className="mt-3">Kodam kamu: {randomItem}</p>}
+        {/* {randomItem && <p className="mt-3">Kodam kamu: {randomItem}</p>} */}
 
         <input
           type="text"
@@ -52,6 +50,17 @@ const Home = () => {
           value={inputName}
           onChange={(e) => setInputName(e.target.value)}
         /><br />
+
+        <input
+          type="text"
+          placeholder="Hasil"
+          className="input input-bordered w-full max-w-xs mt-5"
+          value={randomItem}
+        readOnly
+        /><br />
+
+        
+       
         <Button className="btn btn-primary mt-3" onClick={picker}>Submit</Button>&nbsp;&nbsp;
         <button className="btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>Info</button>
     
