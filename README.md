@@ -14,7 +14,7 @@ This is a simple React application that picks a random item from an array when a
 1. Clone the repository:
 ```
 git clone https://github.com/Mortalsinner/kodam-Checker.git
-cd cek-kodam-kamu
+cd kodam-checker
 ```
 
 2. Install dependencies:
